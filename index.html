@@ -1,11 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arábia Saudita</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arábia Saudita | Descubra o Reino</title>
+  <meta name="description" content="Conheça a Arábia Saudita: cultura, deserto, história e gastronomia." />
+  <!-- Folha de estilo -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fonte do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+
+  <!-- ===================== CABEÇALHO / MENU ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="logo">🇸🇦 Arábia Saudita</a>
+
+      <!-- Botão do menu mobile -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Links de navegação -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#cultura">Cultura</a>
+        <a href="#gastronomia">Gastronomia</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== SEÇÃO HERO (TOPO) ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-sub reveal">Bem-vindo ao Reino</p>
+      <h1 class="hero-title reveal">Arábia Saudita</h1>
+      <p class="hero-text reveal">
+        Uma terra de dunas douradas, cidades futuristas e uma história
+        que atravessa milênios.
+      </p>
+      <a href="#sobre" class="btn reveal">Explorar agora</a>
+    </div>
+  </section>
+
+  <!-- ===================== NÚMEROS / ESTATÍSTICAS ===================== -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal">
+        <span class="stat-number" data-alvo="2150000">0</span>
+        <p>km² de território</p>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-number" data-alvo="32">0</span>
+        <p>milhões de habitantes</p>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-number" data-alvo="13">0</span>
+        <p>regiões administrativas</p>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-number" data-alvo="7">0</span>
+        <p>sítios da UNESCO</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="section" id="sobre">
+    <div class="container split">
+      <div class="split-text reveal">
+        <span class="tag">Sobre o país</span>
+        <h2>O coração da Península Arábica</h2>
+        <p>
+          A Arábia Saudita é o maior país do Oriente Médio, conhecida por
+          seus vastos desertos, pela riqueza do petróleo e por ser o berço
+          do Islã. Hoje, o país vive uma grande transformação com o projeto
+          <strong>Vision 2030</strong>, modernizando suas cidades e turismo.
+        </p>
+        <p>
+          Sua capital, <strong>Riade</strong>, mistura arranha-céus modernos
+          com tradições centenárias, criando um destino único no mundo.
+        </p>
+      </div>
+      <div class="split-img reveal">
+        <img src="images/deserto.png" alt="Dunas douradas do deserto da Arábia" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DESTINOS ===================== -->
+  <section class="section section-alt" id="destinos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Destinos</span>
+        <h2>Lugares para conhecer</h2>
+        <p>Do antigo ao futurista, a Arábia surpreende em cada canto.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <img src="images/alula.png" alt="Tumbas antigas de Hegra em AlUla" />
+          <div class="card-body">
+            <h3>AlUla &amp; Hegra</h3>
+            <p>Tumbas nabateias esculpidas na rocha, um tesouro arqueológico no deserto.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <img src="images/hero.png" alt="Skyline moderno de Riade" />
+          <div class="card-body">
+            <h3>Riade</h3>
+            <p>A capital moderna, com arranha-céus, museus e vida noturna vibrante.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <img src="images/deserto.png" alt="Deserto Rub al-Khali" />
+          <div class="card-body">
+            <h3>Rub al-Khali</h3>
+            <p>O maior deserto de areia contínuo do mundo, perfeito para aventuras.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CULTURA ===================== -->
+  <section class="section" id="cultura">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">Cultura</span>
+        <h2>Tradições e costumes</h2>
+      </div>
+
+      <div class="features">
+        <div class="feature reveal">
+          <div class="feature-icon">🕌</div>
+          <h3>Religião</h3>
+          <p>O Islã molda a vida diária, com Meca e Medina como cidades sagradas.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-icon">☕</div>
+          <h3>Hospitalidade</h3>
+          <p>O café árabe (gahwa) e as tâmaras são símbolos de acolhimento.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-icon">🐪</div>
+          <h3>Tradição beduína</h3>
+          <p>A vida no deserto e os camelos fazem parte da identidade do povo.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-icon">🎶</div>
+          <h3>Música e dança</h3>
+          <p>A Ardah, dança das espadas, é uma das expressões mais tradicionais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GASTRONOMIA ===================== -->
+  <section class="section section-alt" id="gastronomia">
+    <div class="container split">
+      <div class="split-img reveal">
+        <img src="images/comida.png" alt="Prato tradicional de Kabsa" />
+      </div>
+      <div class="split-text reveal">
+        <span class="tag">Gastronomia</span>
+        <h2>Sabores do Reino</h2>
+        <p>
+          A culinária saudita é rica em especiarias e tradição. O prato
+          nacional é o <strong>Kabsa</strong>, feito com arroz, carne e
+          temperos aromáticos.
+        </p>
+        <ul class="lista">
+          <li>🍛 Kabsa — arroz temperado com carne</li>
+          <li>🥟 Sambusa — pastéis recheados</li>
+          <li>🍯 Tâmaras com café árabe</li>
+          <li>🍮 Kunafa — doce típico do Oriente Médio</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer-logo">🇸🇦 Arábia Saudita</h2>
+      <p>Descubra a terra das dunas douradas e das cidades do futuro.</p>
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#cultura">Cultura</a>
+        <a href="#gastronomia">Gastronomia</a>
+      </div>
+      <p class="footer-copy">© 2026 — Site informativo feito com HTML, CSS e JS.</p>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
 </body>
 </html>
