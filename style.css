@@ -11,3 +11,27 @@ article {
     padding: 20px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.navbar{
+    text-align: center;
+    gap: 5px;
+    display: flex;
+    margin: 0 auto;
+}
+.btn {
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+.btn:hover{
+    transition: 0.9s;
+    color: black;
+    background-color: green;
+}
+.logo{
+    font-size: 30px;
+    text-align: center;
+}
