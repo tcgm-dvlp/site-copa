@@ -30,12 +30,33 @@ article {
     transition: 0.9s;
     color: black;
     background-color: green;
+    transform: translateY(-4px);
 }
 .logo{
     font-size: 30px;
     text-align: center;
 }
+.prox-pag{
+    display: inline-block;
+    background-image: url('midias/images-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    width: 30px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: auto;
+}
 .pag-anterior{
-    background-image: url(midias/images-removebg-preview.png);
-    
+    display: inline-block;
+    background-image: url('midias/images-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    width: 30px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: auto;
 }
