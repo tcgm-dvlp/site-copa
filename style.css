@@ -1,3 +1,18 @@
+@keyframes cards{
+    0%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(-20px);
+        background-color: rgb(197, 14, 14);
+        color: #fff;
+    }
+    100%{
+        transform: translateY(0px);
+        background-color: #fff;
+        color: black;
+    }
+}
 body{
     display: flex;
     flex-direction: column;
@@ -99,4 +114,19 @@ article {
   gap: 20px;
   flex-wrap: nowrap;
   justify-content: center;
+}
+.cardzinhos:hover .petro{
+    animation: cards 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cardzinhos:hover .gas{
+    animation: cards 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cardzinhos:hover .ouro{
+    animation: cards 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cardzinhos:hover .bau{
+    animation: cards 4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.audio-card{
+    display: none;
 }
