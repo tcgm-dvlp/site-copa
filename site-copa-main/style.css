@@ -1,0 +1,102 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+.tit-cabeçalho{
+    text-align: center;
+}
+article {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.navbar{
+    text-align: center;
+    gap: 5px;
+    display: flex;
+    margin: 0 auto;
+}
+.btn {
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+.btn:hover{
+    transition: 0.9s;
+    color: black;
+    background-color: green;
+    transform: translateY(-4px);
+}
+.logo{
+    font-size: 30px;
+    text-align: center;
+}
+.prox-pag{
+    display: inline-block;
+    background-image: url('midias/images-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    width: 30px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: auto;
+}
+.pag-anterior{
+    display: inline-block;
+    background-image: url('midias/images-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    width: 30px;
+    height: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: auto;
+}
+.petro {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+.gas {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}.ouro {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}.bau {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+.cardzinhos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
