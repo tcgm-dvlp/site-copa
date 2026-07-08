@@ -1,0 +1,295 @@
+/* ==========================================================================
+   Configurações Gerais e Reset
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links */
+    background-color: #080c0a; /* Cor de segurança caso o gradiente falhe */
+}
+
+body {
+    color: #f5f5f7;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Gradiente em degradê escuro misturando tons de preto e o verde da Arábia Saudita */
+    background: linear-gradient(135deg, #040605 0%, #08120c 50%, #032414 100%);
+    background-attachment: fixed; /* Mantém o fundo fixo enquanto o conteúdo rola */
+}
+
+/* ==========================================================================
+   Cabeçalho e Menu (Navbar)
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(8, 12, 10, 0.85);
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
+    border-bottom: 1px solid rgba(0, 108, 53, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #006C35; /* Verde Oficial da Arábia Saudita */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .btn {
+    text-decoration: none;
+    color: #a1a1a6;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.navbar .btn:hover {
+    color: #ffffff;
+    background: rgba(0, 108, 53, 0.15);
+    box-shadow: inset 0 0 8px rgba(0, 108, 53, 0.3);
+}
+
+/* ==========================================================================
+   Seção Hero (Boas-vindas)
+   ========================================================================== */
+   .hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    
+    /* Ajustado: O degradê começa a escurecer mais cedo (a partir dos 20%) */
+    background: 
+        linear-gradient(to top, #040605 0%, rgba(4, 6, 5, 0.8) 50%, rgba(4, 6, 5, 0) 100%),
+        url('midias/arabia-saudita.jpg'); /* Use o caminho que funcionou para você */
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes fade-in-scroll {
+    from {
+        opacity: 0;
+        filter: blur(6px); /* Começa borrado */
+        transform: translateY(40px); /* Sobe um pouco mais suave */
+    }
+    to {
+        opacity: 1;
+        filter: blur(0); /* Clarea perfeitamente */
+        transform: translateY(0);
+    }
+}
+
+.cards-section {
+    padding: 100px 8% 140px 8%;
+    background-color: #040605; /* Mesma cor onde o degradê termina */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #a1a1a6;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.scroll-down-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #006C35;
+    border: 2px solid #006C35;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down-btn:hover {
+    background: #006C35;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 108, 53, 0.6);
+}
+
+/* ==========================================================================
+   Seção de Cards (Conteúdo)
+   ========================================================================== */
+.cards-section {
+    padding: 100px 8% 140px 8%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #ffffff;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #006C35;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    width: calc(33.333% - 20px);
+    min-width: 280px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 35px 30px;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #a1a1a6;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.card-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #006C35;
+    transition: letter-spacing 0.3s ease;
+}
+
+/* Efeitos de Hover nos Cards */
+.card-link:hover .card {
+    transform: translateY(-8px);
+    border-color: rgba(0, 108, 53, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 108, 53, 0.1);
+}
+
+.card-link:hover h3 {
+    color: #006C35;
+}
+
+.card-link:hover .card-more {
+    letter-spacing: 3px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #040605;
+    color: #636366;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Animações de Entrada (Fade-in) e Scroll efeito
+   ========================================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+/* Animação Nativa de Scroll para os Cards (Funciona nos navegadores modernos) */
+@media (prefers-reduced-motion: no-preference) {
+    .card {
+        animation: fade-in-scroll linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+}
+
+@keyframes fade-in-scroll {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
