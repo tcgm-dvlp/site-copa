@@ -13,11 +13,25 @@
         color: black;
     }
 }
+@keyframes mudar-cor-back{
+    0%{
+        background: linear-gradient(to right, #002500, #002500);
+        color: #fff;
+    }
+    50%{
+        background-color: #002500;
+        color: #ddd016;
+    }
+    100%{
+        background-color: #67bb5c;
+        color: #000000;
+    }
+}
 body{
     display: flex;
     flex-direction: column;
-    background-color: rgb(1, 8, 1);
     color: #eecd60;
+    animation: mudar-cor-back 20s infinite alternate ease-in-out;
 }
 
 .tit-cabeçalho{
