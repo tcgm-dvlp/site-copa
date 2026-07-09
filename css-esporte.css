@@ -74,7 +74,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 15px 8%;
     background: var(--verde-escuro);
     backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
     border-bottom: 1px solid rgba(0, 108, 53, 0.2);
