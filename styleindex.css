@@ -85,7 +85,7 @@
       
       /* Ajustado: O degradê começa a escurecer mais cedo (a partir dos 20%) */
       background: 
-          linear-gradient(to top, #040605 0%, rgba(4, 6, 5, 0.8) 50%, rgba(4, 6, 5, 0) 100%),
+          linear-gradient(to top, var(--verde-escuro) 10%, var(--verde-escuro) 10%, rgba(4, 6, 5, 0) 100%),
           url('midias/arabia-saudita.jpg'); /* Use o caminho que funcionou para você */
           
       background-size: cover;
