@@ -1,4 +1,7 @@
-:root {
+/* ==========================================================================
+   Suas Variáveis de Cores Preservadas
+   ========================================================================== */
+   :root {
     --verde-claro: #0B6E4F;
     --verde-escuro: #033B2F;
     --dourado: #d4af37;
@@ -6,4 +9,205 @@
     --branco-creme: #E8E0C8;
     --preto: #1a1a1a;
     --cinza: #6363665d;
-  }
+}
+  
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+  
+html {
+    scroll-behavior: smooth;
+    background-color: #080c0a;
+}
+  
+body {
+    color: var(--branco-creme);
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Fundo escuro premium integrado com o tema */
+    background: linear-gradient(135deg, #040605 0%, #08120c 50%, #021a10 100%);
+    background-attachment: fixed;
+    padding: 60px 5% 120px 5%;
+}
+
+/* ==========================================================================
+   Estilização do Cabeçalho
+   ========================================================================== */
+header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.tit-cabeçalho {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--branco);
+    text-shadow: 0 0 20px rgba(11, 110, 79, 0.4);
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa abaixo do título principal */
+.tit-cabeçalho::after {
+    content: '';
+    display: flex;
+    position: center;
+    width: 60%;
+    height: 6px;
+    background: var(--dourado);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+    Navegação sinistra   
+   ========================================================================== */
+   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--verde-escuro);
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
+    border-bottom: 1px solid rgba(0, 108, 53, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--branco-creme); /* Verde Oficial da Arábia Saudita */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .btn {
+    text-decoration: none;
+    color: var(--branco-creme);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.navbar .btn:hover {
+    color: var(--branco);
+    background: rgba(0, 108, 53, 0.15);
+    box-shadow: inset 0 0 8px var(--verde-escuro);
+}
+
+
+/* ==========================================================================
+   Alinhamento dos Cards (Layout em Grid 2x3)
+   ========================================================================== */
+   .container-esportes {
+    max-width: 1200px; /* Aumentado para dar espaço para as duas colunas */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria exatamente 2 colunas iguais */
+    gap: 30px; /* Espaçamento entre os cards */
+}
+
+/* Seleciona tanto .cardzinhos quanto .card do seu HTML */
+.cardzinhos, .card {
+    background: rgba(26, 26, 26, 0.65); /* Seu --preto com transparência */
+    border: 1px solid rgba(11, 110, 79, 0.3); /* Borda com seu --verde-claro sutil */
+    border-radius: 16px;
+    padding: 30px; /* Ajustado para caber melhor no layout de grid */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+    /* Garante que os cards de uma mesma fileira tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* Suaviza qualquer interação com o card */
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Responsividade: Se a tela for pequena (celular), volta para 1 coluna automática */
+@media (max-width: 768px) {
+    .container-esportes {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+}
+/* ==========================================================================
+   Elementos Internos (Títulos, Parágrafos e Imagens)
+   ========================================================================== */
+   .texto h2, .article h2 {
+    font-size: 1.8rem;
+    color: var(--dourado); 
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center; /* Adicione esta linha para centralizar os títulos dourados */
+}
+
+.texto p, .article p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--branco-creme);
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Garante que o último parágrafo não quebre o espaçamento se houver imagem */
+.texto p:last-of-type {
+    margin-bottom: 25px;
+}
+
+/* Estilização das imagens internas do seu código */
+.texto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+    border-radius: 8px;
+    border: 1px solid var(--verde-escuro);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.texto img:hover {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Animação de Scroll Nativa (Suavização total sem cortes secos)
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+    .cardzinhos, .card {
+        animation: surgirNoScroll linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 35%;
+    }
+}
+
+@keyframes surgirNoScroll {
+    from {
+        opacity: 0;
+        filter: blur(5px); /* Efeito esfumaçado inicial */
+        transform: translateY(50px); /* Vem de baixo suavemente */
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
