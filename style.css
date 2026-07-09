@@ -100,7 +100,7 @@ article {
     margin-right: auto;
 }
 
-.petro, .gas, .ouro, .bau, .autom, .cor-camelo, .fut, .criket, .outros, .hist, .averrois, .avicena, .cult-socie, .cotidiano, .cotidiano, .culinaria, .form-exp{
+.petro, .gas, .ouro, .bau, .hist, .averrois, .avicena, .cult-socie, .cotidiano, .cotidiano, .culinaria, .form-exp{
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 14px;
@@ -111,7 +111,7 @@ article {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.petro:hover, .gas:hover, .ouro:hover, .bau:hover, .autom:hover, .cor-camelo:hover, .fut:hover, .criket:hover, .outros:hover, .hist:hover, .averrois:hover, .avicena:hover, .cult-socie:hover, .cotidiano:hover, .cotidiano:hover, .culinaria:hover, .form-exp:hover{
+.petro:hover, .gas:hover, .ouro:hover, .bau:hover, .hist:hover, .averrois:hover, .avicena:hover, .cult-socie:hover, .cotidiano:hover, .cotidiano:hover, .culinaria:hover, .form-exp:hover{
   transform: translateY(-6px);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
   background-color: #7e2b04;
