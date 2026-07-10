@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Configurações Globais e Variáveis de Cores
+   ========================================================================== */
+:root {
+    --cor-fundo: #f4ede2;       /* Tom de areia bem claro */
+    --cor-card: #ffffff;        /* Branco puro para os blocos */
+    --cor-texto: #2c2520;       /* Marrom bem escuro para leitura confortável */
+    --cor-principal: #1b4d3e;   /* Verde Escuro (Tradicional) */
+    --cor-secundaria: #c29b38;  /* Dourado / Tom de Especiaria */
+    --cor-borda: #e6dfd3;       /* Borda suave */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Layout do Container Principal
+   ========================================================================== */
+.container-cultura {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre cada seção */
+}
+
+/* ==========================================================================
+   Estilização dos Cards de Conteúdo
+   ========================================================================== */
+.card-cultura {
+    background-color: var(--cor-card);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--cor-principal);
+    transition: transform 0.2s ease;
+}
+
+.card-cultura:hover {
+    transform: translateY(-2px);
+}
+
+/* Typography (Títulos e Parágrafos) */
+.conteudo-artigo h1 {
+    font-size: 2.2rem;
+    color: var(--cor-principal);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+}
+
+.conteudo-artigo h2 {
+    font-size: 1.8rem;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.conteudo-artigo h3 {
+    font-size: 1.4rem;
+    color: var(--cor-secundaria);
+    margin: 25px 0 10px 0;
+}
+
+.conteudo-artigo h4 {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 15px 0 10px 0;
+    font-style: italic;
+}
+
+.conteudo-artigo p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Listas (Culinária e Curiosidades)
+   ========================================================================== */
+.lista-culinaria, .lista-curiosidades {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+.lista-culinaria li, .lista-curiosidades li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1rem;
+}
+
+/* Ícone customizado antes dos itens da lista */
+.lista-culinaria li::before, .lista-curiosidades li::before {
+    content: "◈";
+    position: absolute;
+    left: 0;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Galeria de Imagens e Mídias
+   ========================================================================== */
+.galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.galeria-imagens img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Faz as imagens preencherem o espaço sem distorcer */
+    border-radius: 8px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Ajuste específico para as imagens da culinária ficarem alinhadas */
+.culinaria-imagens img {
+    height: 180px;
+}
+
+.imagem-destaque {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.imagem-destaque img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nota-final {
+    font-style: italic;
+    color: #666;
+    background-color: #fcfbfa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px dashed var(--cor-borda);
+}
+
+/* ==========================================================================
+   Botões de Navegação (Rodapé)
+   ========================================================================== */
+.navegacao-paginas {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacao-paginas a {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.pag-anterior {
+    background-color: #dfd5c6;
+    color: var(--cor-texto);
+}
+
+.pag-anterior:hover {
+    background-color: #d2c5b3;
+}
+
+.prox-pag {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+}
+
+.prox-pag:hover {
+    background-color: #12352b;
+    box-shadow: 0 4px 12px rgba(27, 77, 62, 0.3);
+}
+
+/* ==========================================================================
+   Responsividade para Celulares
+   ========================================================================== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .card-cultura {
+        padding: 20px;
+    }
+
+    .conteudo-artigo h1 {
+        font-size: 1.8rem;
+    }
+
+    .navegacao-paginas {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .navegacao-paginas a {
+        width: 100%;
+        text-align: center;
+    }
+}

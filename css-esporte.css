@@ -28,10 +28,11 @@ body {
     color: var(--branco-creme);
     min-height: 100vh;
     overflow-x: hidden;
-    /* Fundo escuro premium integrado com o tema */
     background: linear-gradient(135deg, #040605 0%, #08120c 50%, #021a10 100%);
     background-attachment: fixed;
-    padding: 60px 5% 120px 5%;
+    
+    /* ALTERADO: De 60px para 140px no topo para dar espaço ao menu fixo */
+    padding: 140px 5% 120px 5%; 
 }
 
 /* ==========================================================================
@@ -39,53 +40,49 @@ body {
    ========================================================================== */
 header {
     text-align: center;
+    margin-top: 20px; /* Aumentamos para 140px para livrar o título do menu fixo */
     margin-bottom: 70px;
 }
 
-.tit-cabeçalho {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--branco);
-    text-shadow: 0 0 20px rgba(11, 110, 79, 0.4);
-    position: relative;
-    display: inline-block;
-}
 
-/* Linha decorativa abaixo do título principal */
-.tit-cabeçalho::after {
-    content: '';
-    display: flex;
-    position: center;
-    width: 60%;
-    height: 6px;
-    background: var(--dourado);
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
 
 /* ==========================================================================
     Navegação sinistra   
    ========================================================================== */
    .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: var(--verde-escuro);
-    backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
-    border-bottom: 1px solid rgba(0, 108, 53, 0.2);
-    z-index: 1000;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 70px;
+      padding: 20px 8%;
+      background: var(--verde-escuro);
+      backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
+      border-bottom: 1px solid rgba(0, 108, 53, 0.2);
+      z-index: 1000;
+  }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: 1px;
-    color: var(--branco-creme); /* Verde Oficial da Arábia Saudita */
+    color: var(--branco-creme);
+    
+    /* Alinha a imagem e o texto na mesma linha */
+    display: flex;
+    align-items: center; 
+    gap: 12px; /* Controla o espaço entre a imagem e o texto */
+    text-decoration: none; /* Remove sublinhado caso seja um link */
+}
+
+/* Controla o tamanho ideal da imagem para não quebrar a barra de menu */
+.img-logo {
+    height: 40px; /* Define uma altura limite sutil */
+    width: auto;  /* Mantém as proporções da imagem sem achatar */
+    object-fit: contain;
 }
 
 .navbar {
@@ -109,6 +106,26 @@ header {
     box-shadow: inset 0 0 8px var(--verde-escuro);
 }
 
+.tit-cabeçalho {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--branco);
+    text-shadow: 0 0 20px rgba(11, 110, 79, 0.4);
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa abaixo do título principal */
+.tit-cabeçalho::after {
+    content: '';
+    display: flex;
+    position: center;
+    width: 60%;
+    height: 6px;
+    background: var(--dourado);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
 
 /* ==========================================================================
    Alinhamento dos Cards (Layout em Grid 2x3)
