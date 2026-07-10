@@ -50,20 +50,19 @@ header {
     Navegação sinistra   
    ========================================================================== */
    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 70px;
-      padding: 20px 8%;
-      background: var(--verde-escuro);
-      backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
-      border-bottom: 1px solid rgba(0, 108, 53, 0.2);
-      z-index: 1000;
-  }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--verde-escuro);
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
+    border-bottom: 1px solid rgba(0, 108, 53, 0.2);
+    z-index: 1000;
+}
 
 .logo {
     font-size: 1.5rem;
