@@ -1,0 +1,556 @@
+/* ==========================================================================
+   Variáveis de Cores (mesmo padrão do site)
+   ========================================================================== */
+:root {
+    --verde-claro: #0B6E4F;
+    --verde-escuro: #033B2F;
+    --dourado: #d4af37;
+    --branco: #FFFFFF;
+    --branco-creme: #E8E0C8;
+    --preto: #1a1a1a;
+    --cinza: #6363665d;
+
+    /* Tons extras só para o gráfico de composição (mesma família de cores) */
+    --dourado-claro: #e8c766;
+    --verde-agua: #12925f;
+    --cinza-grafico: #8a8a8e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #080c0a;
+}
+
+body {
+    color: var(--branco-creme);
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #040605 0%, #08120c 50%, #021a10 100%);
+    background-attachment: fixed;
+    padding: 140px 5% 120px 5%;
+}
+
+/* ==========================================================================
+   Cabeçalho de Título + Navegação Fixa (mesmo padrão do site)
+   ========================================================================== */
+header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--verde-escuro);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 108, 53, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--branco-creme);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.img-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .btn {
+    text-decoration: none;
+    color: var(--branco-creme);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.navbar .btn:hover {
+    color: var(--branco);
+    background: rgba(0, 108, 53, 0.15);
+    box-shadow: inset 0 0 8px var(--verde-escuro);
+}
+
+.tit-cabeçalho {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--branco);
+    text-shadow: 0 0 20px rgba(11, 110, 79, 0.4);
+    position: relative;
+    display: inline-block;
+}
+
+.tit-cabeçalho::after {
+    content: '';
+    display: flex;
+    position: center;
+    width: 60%;
+    height: 6px;
+    background: var(--dourado);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   Layout Principal
+   ========================================================================== */
+.container-economia {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.container-economia > section > h2 {
+    font-size: 1.9rem;
+    color: var(--dourado);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.container-economia > section > p.intro-secao {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 40px;
+    max-width: 780px;
+}
+
+/* ==========================================================================
+   Bloco 1 — Recursos Naturais (lista com barra de relevância, sem cards)
+   ========================================================================== */
+.lista-recursos {
+    display: flex;
+    flex-direction: column;
+}
+
+.recurso-item {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-top: 1px solid rgba(232, 224, 200, 0.12);
+}
+
+.recurso-item:last-child {
+    border-bottom: 1px solid rgba(232, 224, 200, 0.12);
+}
+
+.recurso-icone {
+    font-size: 1.9rem;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.recurso-texto {
+    flex: 1;
+}
+
+.recurso-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.recurso-cabecalho h3 {
+    font-size: 1.25rem;
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.recurso-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.tag-alta {
+    background: var(--dourado);
+    color: var(--preto);
+}
+
+.tag-media {
+    background: rgba(11, 110, 79, 0.7);
+    color: var(--branco);
+}
+
+.tag-complementar {
+    background: transparent;
+    color: var(--branco-creme);
+    border: 1px solid rgba(232, 224, 200, 0.4);
+}
+
+.recurso-texto p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.recurso-texto p:last-of-type {
+    margin-bottom: 12px;
+}
+
+.recurso-barra {
+    width: 100%;
+    max-width: 320px;
+    height: 6px;
+    background: rgba(232, 224, 200, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.recurso-barra-preenchida {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--verde-claro), var(--dourado));
+    border-radius: 4px;
+    transition: width 1.4s ease;
+}
+
+.pronto .recurso-barra-preenchida {
+    width: var(--valor);
+}
+
+.recurso-legenda {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.82rem;
+    color: var(--branco-creme);
+    opacity: 0.75;
+}
+
+/* ==========================================================================
+   Bloco 2 — PIB em Números (gráfico de barras + donut animados no carregamento)
+   ========================================================================== */
+.grafico-wrapper {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: rgba(26, 26, 26, 0.4);
+    border: 1px solid rgba(11, 110, 79, 0.3);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.grafico-barras {
+    flex: 1 1 400px;
+}
+
+.grafico-barras h3,
+.grafico-donut-bloco h3 {
+    font-size: 1.05rem;
+    color: var(--branco-creme);
+    font-weight: 600;
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.barras-linha {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 14px;
+    height: 260px;
+    padding: 0 4px;
+}
+
+.barra-coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.barra-topo {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.barra-valor-num {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--branco);
+}
+
+.barra-crescimento {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--dourado);
+}
+
+.barra-visual {
+    width: 100%;
+    max-width: 46px;
+    height: 0;
+    /* --altura-final é definida no HTML, em px, para cada ano */
+    background: linear-gradient(180deg, var(--dourado) 0%, var(--verde-claro) 100%);
+    border-radius: 6px 6px 0 0;
+    transition: height 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pronto .barra-visual {
+    height: var(--altura-final);
+}
+
+.barra-coluna.projecao .barra-visual {
+    background: repeating-linear-gradient(
+        135deg,
+        var(--verde-claro),
+        var(--verde-claro) 6px,
+        var(--verde-escuro) 6px,
+        var(--verde-escuro) 12px
+    );
+    opacity: 0.85;
+}
+
+.barra-ano {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--branco-creme);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Donut de composição do PIB
+   ========================================================================== */
+.grafico-donut-bloco {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grafico-donut {
+    width: 210px;
+    height: 210px;
+}
+
+.donut-rotacao {
+    transform: rotate(-90deg);
+    transform-origin: 100px 100px;
+}
+
+.donut-trilha {
+    fill: none;
+    stroke: rgba(232, 224, 200, 0.1);
+    stroke-width: 26;
+}
+
+.donut-fatia {
+    fill: none;
+    stroke-width: 26;
+    stroke-dasharray: 0 439.82;
+    transition: stroke-dasharray 1.3s ease;
+}
+
+.pronto .donut-fatia {
+    stroke-dasharray: var(--comprimento) 439.82;
+}
+
+.legenda-donut {
+    list-style: none;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.legenda-donut li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+}
+
+.legenda-cor {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legenda-donut span.legenda-pct {
+    margin-left: auto;
+    font-weight: 700;
+    color: var(--branco);
+}
+
+.fonte-dados {
+    margin-top: 26px;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--branco-creme);
+    opacity: 0.7;
+    text-align: center;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   Bloco 3 — Outros Indicadores (faixa de estatísticas)
+   ========================================================================== */
+.tira-estatisticas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.estatistica-item {
+    flex: 1 1 220px;
+    padding: 24px;
+    border-left: 3px solid var(--dourado);
+    background: rgba(232, 224, 200, 0.04);
+    border-radius: 0 10px 10px 0;
+}
+
+.estatistica-numero {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--branco);
+    margin-bottom: 6px;
+}
+
+.estatistica-legenda {
+    font-size: 0.85rem;
+    color: var(--branco-creme);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Bloco 4 — Resumindo
+   ========================================================================== */
+.secao-resumo p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.secao-resumo img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--verde-escuro);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.secao-resumo img:hover {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Animação de Scroll Nativa (mesmo efeito das demais páginas)
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+    .lista-recursos,
+    .grafico-wrapper,
+    .tira-estatisticas,
+    .secao-resumo {
+        animation: surgirNoScroll linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+}
+
+@keyframes surgirNoScroll {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Rodapé de Navegação entre Páginas
+   ========================================================================== */
+.navegacao-paginas {
+    max-width: 1050px;
+    margin: 90px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.navegacao-paginas a {
+    text-decoration: none;
+    color: var(--branco-creme);
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border: 1px solid rgba(11, 110, 79, 0.4);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.navegacao-paginas a:hover {
+    color: var(--preto);
+    background: var(--dourado);
+    border-color: var(--dourado);
+}
+
+@media (max-width: 768px) {
+    .navegacao-paginas {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

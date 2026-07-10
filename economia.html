@@ -3,47 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-economia.css">
     <link rel="shortcut icon" href="midias/Osama_bin_Laden_portrait.ico" type="image/x-icon">
-    <title>Economia</title>
+    <title>Economia - Arábia Saudita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><h1 class="tit-cabeçalho">Principais formas de economia</h1></header>
- <div class="cardzinhos" >
-     <div class="petro">
-    <article class="article1">
-        <h2>Petróleo</h2>
-        <p>A Arábia Saudita possui uma grande variedade de recursos naturais, sendo o petróleo o mais importante deles.</p>
-        <p>O país abriga uma das maiores reservas de petróleo do mundo e é um dos principais exportadores desse recurso.</p>
-        <p>O petróleo é a principal fonte de renda da economia saudita, sendo utilizado para produzir combustíveis, energia e diversos produtos industriais.</p>
-       
-    </article>
-      </div>
-      <div class="gas">
-    <article class="article2">
-        <h2>Gás Natural</h2>
-        <p>Utilizado para gerar eletricidade, abastecer indústrias e servir como matéria-prima para a produção de fertilizantes e produtos químicos.</p>
-    </article>
-    </div>
-     <div class="ouro">
-    <article class="article3">
-        <h2>Ouro</h2>
-        <p>Outro recurso natural importante é o ouro, explorado em diversas minas espalhadas pelo país. A mineração de ouro gera empregos e contribui para aumentar a economia.</p>
-    </article>
-    </div>
-      <div class="bau">
-    <article class="article4">
-        <h2>Bauxita</h2>
-        <p> utilizada na produção de alumínio, além de minerais como cobre, zinco, prata e ferro, que também são explorados em menor escala.</p>
-        <p>Nos últimos anos, o governo tem investido na expansão do setor de mineração para reduzir a dependência da economia em relação ao petróleo.</p>
-    </article>
-    </div>
- </div>
-    <article class="article5">
-        <h1 class="tit-cabeçalho">Resumindo:</h1>
-        <p>Apesar de possuir poucos recursos hídricos e grande parte do território ser formada por desertos, a riqueza em petróleo, gás natural e minerais faz da Arábia Saudita uma das economias mais importantes do Oriente Médio e um dos maiores produtores de energia do mundo.</p>
-    </article>
-<img src="https://clickpetroleoegas.com.br/wp-content/uploads/2025/06/O-acordo-secreto-dos-anos-70-entre-os-EUA-e-a-Arabia-Saudita-que-fez-do-dolar-a-moeda-oficial-do-petroleo-e-garantiu-a-hegemonia-Americana-1-1095x730.jpg" alt="">
-<audio class="audio-card" src="midias/time-stop-sound-effect-eyes-of-heaven_128k-mp3cut.mp3" id="som-card"></audio> <!--esse audio é pra colocar nos cards, no final da animação-->
+
+    <header class="header">
+            <a href="index.html" class="logo">
+                <img src="midias/logo.png" alt="Logo Arábia Saudita" class="img-logo">
+                Arábia Saudita
+            </a>
+        <nav class="navbar">
+            <a href="cultura.html" class="btn">Cultura</a>
+            <a href="esporte.html" class="btn">Esporte</a>
+            <a href="geografia.html" class="btn">Geografia</a>
+            <a href="historia.html" class="btn">História</a>
+        </nav>
+    </header>
+
+    <header>
+        <h1 class="tit-cabeçalho">Principais Formas de Economia</h1>
+    </header>
+
+    <main class="container-economia">
+
+        <section class="secao-recursos">
+            <h2>Recursos Naturais</h2>
+            <p class="intro-secao">A economia saudita é fortemente baseada na exploração de recursos naturais, com grande destaque para o petróleo, mas também para o gás natural e minerais como ouro e bauxita.</p>
+
+            <div class="lista-recursos">
+
+                <div class="recurso-item">
+                    <span class="recurso-icone">🛢️</span>
+                    <div class="recurso-texto">
+                        <div class="recurso-cabecalho">
+                            <h3>Petróleo</h3>
+                            <span class="recurso-tag tag-alta">Participação alta</span>
+                        </div>
+                        <p>A Arábia Saudita possui uma grande variedade de recursos naturais, sendo o petróleo o mais importante deles.</p>
+                        <p>O país abriga uma das maiores reservas de petróleo do mundo e é um dos principais exportadores desse recurso.</p>
+                        <p>O petróleo é a principal fonte de renda da economia saudita, sendo utilizado para produzir combustíveis, energia e diversos produtos industriais.</p>
+                        <div class="recurso-barra">
+                            <div class="recurso-barra-preenchida" style="--valor: 22.3%;"></div>
+                        </div>
+                        <span class="recurso-legenda">Petróleo e gás natural somados respondem por cerca de 22,3% do PIB e aproximadamente 55% da receita do governo saudita (dado de 2024).</span>
+                    </div>
+                </div>
+
+                <div class="recurso-item">
+                    <span class="recurso-icone">🔥</span>
+                    <div class="recurso-texto">
+                        <div class="recurso-cabecalho">
+                            <h3>Gás Natural</h3>
+                            <span class="recurso-tag tag-media">Participação média</span>
+                        </div>
+                        <p>Utilizado para gerar eletricidade, abastecer indústrias e servir como matéria-prima para a produção de fertilizantes e produtos químicos.</p>
+                    </div>
+                </div>
+
+                <div class="recurso-item">
+                    <span class="recurso-icone">🥇</span>
+                    <div class="recurso-texto">
+                        <div class="recurso-cabecalho">
+                            <h3>Ouro</h3>
+                            <span class="recurso-tag tag-complementar">Recurso complementar</span>
+                        </div>
+                        <p>Outro recurso natural importante é o ouro, explorado em diversas minas espalhadas pelo país. A mineração de ouro gera empregos e contribui para aumentar a economia.</p>
+                    </div>
+                </div>
+
+                <div class="recurso-item">
+                    <span class="recurso-icone">⛏️</span>
+                    <div class="recurso-texto">
+                        <div class="recurso-cabecalho">
+                            <h3>Bauxita</h3>
+                            <span class="recurso-tag tag-complementar">Recurso complementar</span>
+                        </div>
+                        <p>Utilizada na produção de alumínio, além de minerais como cobre, zinco, prata e ferro, que também são explorados em menor escala.</p>
+                        <p>Nos últimos anos, o governo tem investido na expansão do setor de mineração para reduzir a dependência da economia em relação ao petróleo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="secao-grafico">
+            <h2>O PIB Saudita em Números</h2>
+            <p class="intro-secao">Entre 2022 e 2026, o PIB saudita oscilou junto com o preço internacional do petróleo, enquanto a economia não-petrolífera cresce de forma mais constante por causa dos investimentos da Visão 2030. Os dados abaixo foram levantados em fontes públicas e oficiais.</p>
+
+            <div class="grafico-wrapper">
+
+                <div class="grafico-barras">
+                    <h3>Evolução do PIB nominal (US$ bilhões)</h3>
+                    <div class="barras-linha">
+
+                        <div class="barra-coluna">
+                            <div class="barra-topo">
+                                <span class="barra-valor-num">1.239</span>
+                            </div>
+                            <div class="barra-visual" style="--altura-final: 188px;"></div>
+                            <span class="barra-ano">2022</span>
+                        </div>
+
+                        <div class="barra-coluna">
+                            <div class="barra-topo">
+                                <span class="barra-valor-num">1.219</span>
+                                <span class="barra-crescimento">-1,7%</span>
+                            </div>
+                            <div class="barra-visual" style="--altura-final: 185px;"></div>
+                            <span class="barra-ano">2023</span>
+                        </div>
+
+                        <div class="barra-coluna">
+                            <div class="barra-topo">
+                                <span class="barra-valor-num">1.238</span>
+                                <span class="barra-crescimento">+1,7%</span>
+                            </div>
+                            <div class="barra-visual" style="--altura-final: 188px;"></div>
+                            <span class="barra-ano">2024</span>
+                        </div>
+
+                        <div class="barra-coluna">
+                            <div class="barra-topo">
+                                <span class="barra-valor-num">1.277</span>
+                                <span class="barra-crescimento">+4,5%</span>
+                            </div>
+                            <div class="barra-visual" style="--altura-final: 194px;"></div>
+                            <span class="barra-ano">2025</span>
+                        </div>
+
+                        <div class="barra-coluna projecao">
+                            <div class="barra-topo">
+                                <span class="barra-valor-num">1.389</span>
+                                <span class="barra-crescimento">+3,1%</span>
+                            </div>
+                            <div class="barra-visual" style="--altura-final: 211px;"></div>
+                            <span class="barra-ano">2026*</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="grafico-donut-bloco">
+                    <h3>Composição do PIB por atividade (2024)</h3>
+                    <svg class="grafico-donut" viewBox="0 0 200 200">
+                        <g class="donut-rotacao">
+                            <circle class="donut-trilha" cx="100" cy="100" r="70"></circle>
+                            <circle class="donut-fatia" cx="100" cy="100" r="70" stroke="#d4af37" stroke-dashoffset="0" style="--comprimento: 98.08;"></circle>
+                            <circle class="donut-fatia" cx="100" cy="100" r="70" stroke="#0B6E4F" stroke-dashoffset="-98.08" style="--comprimento: 71.25;"></circle>
+                            <circle class="donut-fatia" cx="100" cy="100" r="70" stroke="#e8c766" stroke-dashoffset="-169.33" style="--comprimento: 45.30;"></circle>
+                            <circle class="donut-fatia" cx="100" cy="100" r="70" stroke="#12925f" stroke-dashoffset="-214.63" style="--comprimento: 40.02;"></circle>
+                            <circle class="donut-fatia" cx="100" cy="100" r="70" stroke="#E8E0C8" stroke-dashoffset="-254.65" style="--comprimento: 28.59;"></circle>
+                            <circle class="donut-fatia" cx="100" cy="100" r="70" stroke="#8a8a8e" stroke-dashoffset="-283.24" style="--comprimento: 156.58;"></circle>
+                        </g>
+                    </svg>
+                    <ul class="legenda-donut">
+                        <li><span class="legenda-cor" style="background:#d4af37;"></span> Petróleo e gás natural <span class="legenda-pct">22,3%</span></li>
+                        <li><span class="legenda-cor" style="background:#0B6E4F;"></span> Governo <span class="legenda-pct">16,2%</span></li>
+                        <li><span class="legenda-cor" style="background:#e8c766;"></span> Comércio, restaurantes e hotéis <span class="legenda-pct">10,3%</span></li>
+                        <li><span class="legenda-cor" style="background:#12925f;"></span> Indústria (não-petróleo) <span class="legenda-pct">9,1%</span></li>
+                        <li><span class="legenda-cor" style="background:#E8E0C8;"></span> Imóveis <span class="legenda-pct">6,5%</span></li>
+                        <li><span class="legenda-cor" style="background:#8a8a8e;"></span> Outros setores <span class="legenda-pct">35,6%</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="fonte-dados">Fontes: GASTAT — Autoridade Geral de Estatística da Arábia Saudita (PIB e composição setorial, 2024-2025); Fundo Monetário Internacional, Consulta do Artigo IV de 2025; Banco Mundial, World Development Indicators. Valores em dólares correntes. *2026 é projeção do FMI, sujeita a revisão.</p>
+        </section>
+
+        <section class="secao-indicadores">
+            <h2>Outros Indicadores</h2>
+            <div class="tira-estatisticas">
+                <div class="estatistica-item">
+                    <span class="estatistica-numero">US$ 33 mil</span>
+                    <span class="estatistica-legenda">PIB per capita nominal em 2024, o mais alto do Golfo depois de Catar e Emirados Árabes Unidos.</span>
+                </div>
+                <div class="estatistica-item">
+                    <span class="estatistica-numero">50%</span>
+                    <span class="estatistica-legenda">Meta da Visão 2030 para a participação de setores não-petrolíferos no PIB.</span>
+                </div>
+                <div class="estatistica-item">
+                    <span class="estatistica-numero">SAR 1,31 tri</span>
+                    <span class="estatistica-legenda">Despesa prevista no orçamento de 2026, com déficit projetado de 3,3% do PIB.</span>
+                </div>
+                <div class="estatistica-item">
+                    <span class="estatistica-numero">+4,5%</span>
+                    <span class="estatistica-legenda">Crescimento real do PIB em 2025, puxado principalmente pelas atividades não-petrolíferas.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-resumo">
+            <h2>Resumindo</h2>
+            <p>Apesar de possuir poucos recursos hídricos e grande parte do território ser formada por desertos, a riqueza em petróleo, gás natural e minerais faz da Arábia Saudita uma das economias mais importantes do Oriente Médio e um dos maiores produtores de energia do mundo.</p>
+            <img src="https://clickpetroleoegas.com.br/wp-content/uploads/2025/06/O-acordo-secreto-dos-anos-70-entre-os-EUA-e-a-Arabia-Saudita-que-fez-do-dolar-a-moeda-oficial-do-petroleo-e-garantiu-a-hegemonia-Americana-1-1095x730.jpg" alt="Ilustração do acordo entre EUA e Arábia Saudita sobre o petrodólar">
+        </section>
+
+    </main>
+
+    <!-- Esse áudio toca automaticamente assim que a animação do gráfico termina de carregar -->
+    <audio src="midias/time-stop-sound-effect-eyes-of-heaven_128k-mp3cut.mp3" id="som-card"></audio>
+
+    <footer class="navegacao-paginas">
+        <a href="cultura.html" class="pag-anterior">← Ir para Cultura</a>
+        <a href="esporte.html" class="prox-pag">Ir para Esporte →</a>
+    </footer>
+
+    <script>
+        // Espera a página carregar completamente (imagens, fontes etc.)
+        window.addEventListener('load', () => {
+            // Pequeno atraso (150ms) só para garantir que o navegador já desenhou
+            // o estado inicial (barras e donut "zerados") antes de animar.
+            // Sem isso, a transição do CSS pode não disparar corretamente.
+            setTimeout(() => {
+                document.querySelector('.grafico-wrapper').classList.add('pronto');
+                document.querySelector('.lista-recursos').classList.add('pronto');
+            }, 150);
+
+            // Depois que a animação das barras/donut termina (~1.3s de transição),
+            // toca o efeito sonoro.
+            setTimeout(tocarSom, 1500);
+        });
+
+        function tocarSom() {
+            const som = document.getElementById('som-card');
+            if (!som) return;
+
+            // Muitos navegadores bloqueiam áudio automático até que a pessoa
+            // interaja com a página. Se o play() for bloqueado (Promise rejeitada),
+            // guardamos "ouvintes" para tocar o som no primeiro clique, tecla ou
+            // rolagem, e removemos os ouvintes depois de usados.
+            som.play().catch(() => {
+                const tocarNaInteracao = () => som.play().catch(() => {});
+                document.addEventListener('click', tocarNaInteracao, { once: true });
+                document.addEventListener('keydown', tocarNaInteracao, { once: true });
+                document.addEventListener('scroll', tocarNaInteracao, { once: true });
+            });
+        }
+    </script>
+
 </body>
 </html>
